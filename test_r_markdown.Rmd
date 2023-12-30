@@ -1,5 +1,10 @@
 ---
 title: "Test_R_Markdown_Git"
+knit: (function(input_file, encoding) {
+    out_dir <- 'docs';
+    rmarkdown::render(input_file,
+      encoding=encoding,
+      output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
 author: "Jo Garrett"
 date: '2023-12-30'
 output: html_document
